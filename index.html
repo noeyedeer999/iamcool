@@ -1,45 +1,66 @@
-<table style="width:100%; border-collapse:collapse;">
-  <caption style="font-size:1.2rem; font-weight:bold;"><font size="10">簡歷表</font></caption>
-  <tr>
-    <th style="border:1px solid black; padding:8px; color:green"><font size="5">基本資訊</font></th>
-  </tr>
-  <tr>
-    <td style="border:1px solid black">姓名：</td>
-    <td style="border:1px solid black">出生日期：</td>
-    <td style="border:1px solid black">性別：</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black">居住地址：</td>
-    <td style="border:1px solid black">連絡電話：</td>
-    <td style="border:1px solid black">照片：</td>
-  </tr>
-  <tr>
-    <th style="border:1px solid black; padding:8px; color:green"><font size="5">個人簡介</font></th>
-  </tr>
-  <tr>
-    <td colspan="3" style="border:1px solid black">電子信箱：</td>
-  </tr>
-  <tr>
-    <td colspan="3" style="border:1px solid black">學歷：</td>
-  </tr>
-  <tr>
-    <td colspan="3" style="border:1px solid black">專長：</td>
-  </tr>
-  <tr>
-    <td colspan="3" style="border:1px solid black">興趣：</td>
-  </tr>
-  <tr>
-    <td colspan="3" style="border:1px solid black">幹部經驗：</td>
-  </tr>
-  <tr>
-    <td colspan="3" style="border:1px solid black">社團經驗：</td>
-  </tr>
-  <tr>
-    <td colspan="3" style="border:1px solid black">服務經驗：</td>
-  </tr>
-  <tr>
-    <td colspan="3" style="border:1px solid black">活動經驗：  
-<body>
-<input placeholder="上限100字" >
-<button onclick="send()" >確認送出</button>
-</body>
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+		crossorigin="anonymous" 
+		referrerpolicy="no-referrer" 
+		/>
+
+		<link rel="stylesheet" href="style.css"/>
+		<title>My first WebPage</title>
+	</head>
+	<body>
+		<header>
+			<div class="navbar">
+				<div class="logo"><a href="#">首頁</a></div> 
+				<ul class="links">
+					<li><a href="#home">廁所全覽</a></li>
+					<li><a href="#about">廁所分類</a></li>
+					<li><a href="#services">馬桶類別</a></li>
+					<li><a href="#contact">小便斗類別</a></li>
+				</ul>
+				<a href="#" class="action_btn">Get Started</a>
+				<div class="toggle_btn">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+			</div>
+
+			<div class="dropdown_menu">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#contact">Contace</a></li>
+				<li><a href="#" class="action_btn">Get Started</a></li>
+			</div>
+		</header>
+
+		<main>
+			<section id="home">
+				<h1>公廁之家</h1>
+				<p>這是全台公廁馬桶的統計網站<br>
+					點擊廁所全覽觀看360° 廁所影像</p>
+			</section>
+		</main>
+
+		<script>
+			const toggleBtn = document.querySelector('.toggle_btn');
+			const toggleBtnIcon = document.querySelector('.toggle_btn i');
+			const dropDownMenu = document.querySelector('.dropdown_menu');
+
+			toggleBtn.onclick = function(){
+				dropDownMenu.classList.toggle('open');
+				const isOpen = dropDownMenu.classList.contains('open');
+
+				toggleBtnIcon.classList=isOpen
+				?'fa-solid fa-xmark'
+				:'fa-solid fa-bars'
+			}
+		</script
+
+	</body>
+</html>
